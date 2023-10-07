@@ -1,0 +1,63 @@
+$MH1-size: 1.75rem;
+$MH1-height: 2.25rem;
+
+$H1-size: 2rem;
+$H1-height: 2.5rem;
+
+$MH2-size: 1.25rem;
+$MH2-height: 1.75rem;
+
+$H2-size: 1.5rem;
+$H2-height: 2rem;
+
+$MH3-size: .8125rem;
+$MH3-height: 1.25rem;
+
+$H3-size: .875rem;
+$H3-height: 1.375rem;
+
+$MH4-size: .6875rem;
+$MH4-height: 1rem;
+
+$H4-size: .75rem;
+$H4-height: 1.125rem;
+
+$MP1-size: .9375rem;
+$MP1-height: 1.625rem;
+
+$P1-size: 1rem;
+$P1-height: 1.75rem;
+
+$MP2-size: .8125rem;
+$MP2-height: 1.25rem;
+
+$P2-size: .875rem;
+$P2-height: 1.375rem;
+
+$MP3-size: .6875rem;
+$MP3-height: 1rem;
+
+$P3-size: .75rem;
+$P3-height: 1.125rem;
+
+@font-face {
+    font-family: 'titillium-regular';
+    font-weight: 400;
+    src: url("../../assets/fonts/TitilliumWeb-Regular.ttf") format("opentype"),       
+}
+
+@font-face {
+    font-family: 'titillium-semi-bold';
+    src: url("../../assets/fonts/TitilliumWeb-SemiBold.ttf") format("opentype"),       
+}
+
+@font-face {
+    font-family: 'titillium-bold';
+    font-weight: 400;
+    src: url("../../assets/fonts/TitilliumWeb-Bold.ttf") format("opentype"),       
+}
+
+@font-face {
+    font-family: 'titillium-light';
+    src: url("../../assets/fonts/TitilliumWeb-Light.ttf") format("opentype"),       
+}
