@@ -2,7 +2,7 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="footer">
       <div>Footer in progress...</div>
     </div>
   );

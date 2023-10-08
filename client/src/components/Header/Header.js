@@ -12,7 +12,9 @@ const Header = () => {
         <NavLink className="header__login" to={"/login"}>
           Login
         </NavLink>
-        <NavLink className="header__account">Create Account</NavLink>
+        <NavLink to="/create-account" className="header__account">
+          Create Account
+        </NavLink>
         <NavLink className="header__menu">&#9776;</NavLink>
       </div>
     </div>
