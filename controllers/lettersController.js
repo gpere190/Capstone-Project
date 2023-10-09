@@ -11,13 +11,13 @@ exports.allLetters = (_req, res) => {
 
 exports.singleLetter = (req, res) => {
   knex("letters")
-    .where({ "letters.id": req.params.id })
+    .where({ "letters.letter": req.params.letter })
     .select("letters.id", "letters.letter", "letters.image_src")
     .then((letter) => {
       if (!letter.length) {
         return res
           .status(404)
-          .send(`Letter with id ${req.params.id} is not found`);
+          .send(`Letter with id ${req.params.letter} is not found`);
       }
       res.status(200).json(letter[0]);
     })
@@ -25,7 +25,7 @@ exports.singleLetter = (req, res) => {
       res
         .status(400)
         .send(
-          `Error retrieving letter with id ${req.params.id} with error ${err}`
+          `Error retrieving letter with id ${req.params.letter} with error ${err}`
         )
     );
 };

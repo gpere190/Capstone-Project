@@ -6,6 +6,6 @@ const {
 
 router.route("/").get(allLetters);
 
-router.route("/:id").get(singleLetter);
+router.route("/:letter").get(singleLetter);
 
 module.exports = router;
