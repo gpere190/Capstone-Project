@@ -12,7 +12,7 @@ const LettersContainer = ({ word }) => {
   return (
     <div>
       {charArray.map((letter) => {
-        return <Letter key={letter} letterProp={letter} wordProp={word} />;
+        return <Letter key={letter} letterProp={letter} />;
       })}
     </div>
   );

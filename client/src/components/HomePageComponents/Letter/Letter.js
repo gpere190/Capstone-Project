@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Letter = ({ letterProp, wordProp }) => {
+const Letter = ({ letterProp }) => {
   const [letterData, setLetterData] = useState([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Letter = ({ letterProp, wordProp }) => {
       });
   }, []); // The empty dependency array ensures the effect runs only once
 
-  return <img src={letterData.image_src} />;
+  return <img src={letterData.image_src} alt={letterData.Letter} />;
 };
 
 export default Letter;

@@ -47,7 +47,6 @@ const ConversionForm = () => {
               value={inputValue}
               maxLength={10}
             />
-            <div className="paragraph">Input Value: {inputValue}</div>
           </div>
           <MickeyThumbsUpButton />
         </div>
