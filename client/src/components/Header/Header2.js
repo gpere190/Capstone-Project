@@ -1,5 +1,5 @@
 import "./Header2.scss";
-import desktopLogo from "../../assets/images/logo_desktop.png";
+import desktopLogo from "../../assets/images/misc/logo_desktop.png";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {

@@ -9,7 +9,7 @@ const ProfileButton = ({ profile, profileNum }) => {
 
   return (
     <img
-      className="loginbody__left__characters__prof"
+      className="loginbody__left__characters__profiles"
       src={profile}
       onClick={handleClick}
     ></img>

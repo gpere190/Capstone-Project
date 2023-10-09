@@ -1,20 +1,15 @@
 import React from "react";
-import submitHand from "../../../assets/images/mickey_thumbsUp.png";
+import submitHand from "../../../assets/images/misc/mickey_thumbsUp.png";
 import "./MickeyThumbsUp.scss";
 
-function MyButton() {
-  const handleClick = () => {
-    // This function will be executed when the button is clicked
-    alert("Button Clicked!");
-  };
-
+function MickeyThumbsUpButton() {
   return (
     <div>
-      <button onClick={handleClick} className="myButton">
+      <button type="submit" className="mickeyThumbsUpButton">
         <img className="body__submitThumbsup" src={submitHand}></img>
       </button>
     </div>
   );
 }
 
-export default MyButton;
+export default MickeyThumbsUpButton;

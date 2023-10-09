@@ -2,29 +2,32 @@ import "./CreateAccountPage.scss";
 import React from "react";
 import Header from "../../components/Header/Header2";
 import Footer from "../../components/Footer/Footer";
-import Profile1 from "../../assets/images/profile_mickey.png";
-import Profile2 from "../../assets/images/Profile_Baby.png";
-import Profile3 from "../../assets/images/Profile_IronMan.png";
-import Profile4 from "../../assets/images/Profile_spoon.png";
-import Profile5 from "../../assets/images/Profile_Woodie.png";
-import EmailInput from "../../components/LoginComponents/EmailInput/EmailInput";
-import PasswordInput from "../../components/LoginComponents/PasswordInput/PasswordInput";
+import Profile1 from "../../assets/images/profiles/profile_mickey.png";
+import Profile2 from "../../assets/images/profiles/Profile_Baby.png";
+import Profile3 from "../../assets/images/profiles/Profile_IronMan.png";
+import Profile4 from "../../assets/images/profiles/Profile_spoon.png";
+import Profile5 from "../../assets/images/profiles/Profile_Woodie.png";
+import EmailInput from "../../components/partials/EmailInput/EmailInput";
+import PasswordInput from "../../components/partials/PasswordInput/PasswordInput";
 import ConfirmPassInput from "../../components/CreateAccountComponents/ConfirmPassInput/ConfirmPassInput";
 import SignUpButton from "../../components/CreateAccountComponents/SignUpButton/SignUpButton";
 import HaveAccountButton from "../../components/CreateAccountComponents/HaveAccountButton/HaveAccountButton";
-import GoogleIcon from "../../components/LoginComponents/GoogleIcon/GoogleIcon";
-import MetaIcon from "../../components/LoginComponents/MetaIcon/MetaIcon";
-import AppleIcon from "../../components/LoginComponents/AppleIcon/AppleIcon";
+import Icon from "../../components/partials/Icon/Icon";
+import GoogleIcon from "../../assets/images/misc/GoogleIcon.png";
+import MetaIcon from "../../assets/images/misc/MetaIcon.png";
+import AppleIcon from "../../assets/images/misc/AppleIcon.png";
 import ProfileButton from "../../components/CreateAccountComponents/ProfileButton/ProfileButton";
 
-const login = () => {
+const createaccount = () => {
   return (
     <div className="background">
       <Header />
-      <div className="loginbody">
-        <div className="loginbody__left">
-          <p className="loginbody__left__Text">Select a profile character</p>
-          <div className="loginbody__left__characters">
+      <div className="createaccountbody">
+        <div className="createaccountbody__left">
+          <p className="createaccountbody__left__Text">
+            Select a profile character
+          </p>
+          <div className="createaccountbody__left__characters">
             <ProfileButton profile={Profile1} profileNum="1" />
             <ProfileButton profile={Profile2} profileNum="2" />
             <ProfileButton profile={Profile3} profileNum="3" />
@@ -33,18 +36,20 @@ const login = () => {
           </div>
         </div>
 
-        <div className="loginbody__right">
-          <p className="loginbody__right__Text">Create Account</p>
+        <div className="createaccountbody__right">
+          <p className="createaccountbody__right__Text">Create Account</p>
           <EmailInput />
           <PasswordInput />
           <ConfirmPassInput />
           <SignUpButton />
           <HaveAccountButton />
-          <p className="loginbody__right__continuewith">Or continue with</p>
-          <div className="loginbody__right__platformIcons">
-            <GoogleIcon />
-            <MetaIcon />
-            <AppleIcon />
+          <p className="createaccountbody__right__continuewith">
+            Or continue with
+          </p>
+          <div className="createaccountbody__right__platformIcons">
+            <Icon icon={GoogleIcon} />
+            <Icon icon={MetaIcon} />
+            <Icon icon={AppleIcon} />
           </div>
         </div>
       </div>
@@ -53,4 +58,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default createaccount;

@@ -2,14 +2,14 @@
 @use '../../styles/partials/fonts' as*;
 @use '../../styles/partials/mixins' as*;
 
-html, body{
-    font-family: 'titillium-regular'; 
-    font-weight: 700;
-    margin: 0;    
-    color: $black; 
-    background-color: $white;
-    box-sizing: border-box; 
-}
+// html, body{
+//     font-family: 'titillium-regular'; 
+//     font-weight: 700;
+//     margin: 0;    
+//     color: $black; 
+//     //background-color: $white;
+//     box-sizing: border-box; 
+// }
 
 .header{
     display: flex;

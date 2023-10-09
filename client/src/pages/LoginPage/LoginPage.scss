@@ -9,8 +9,8 @@ body {
 }
 
 .background{
-    background-image: url("../../assets/images/disney_background.png");
-    height: 100vh;
+    background-image: url("../../assets/images/misc/disney_background.png");
+    height: 10vh;
     display: flex;
     flex-direction: column;
 }
@@ -18,7 +18,7 @@ body {
 .loginbody{
     display: flex;
     flex-direction: row;
-    height: 90%;
+    height: 100vh;
 
     &__left {
         display: flex;

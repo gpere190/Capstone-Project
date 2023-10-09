@@ -2,14 +2,15 @@ import "./LoginPage.scss";
 import React from "react";
 import Header from "../../components/Header/Header2";
 import Footer from "../../components/Footer/Footer";
-import DisneyFriendsImg from "../../assets/images/disneyFriends.webp";
-import EmailInput from "../../components/LoginComponents/EmailInput/EmailInput";
-import PasswordInput from "../../components/LoginComponents/PasswordInput/PasswordInput";
+import DisneyFriendsImg from "../../assets/images/misc/disneyFriends.webp";
+import EmailInput from "../../components/partials/EmailInput/EmailInput";
+import PasswordInput from "../../components/partials/PasswordInput/PasswordInput";
 import SignInButton from "../../components/LoginComponents/SignInButton/SignInButton";
 import CreateAccountButton from "../../components/LoginComponents/CreateAccountButton/CreateAccountButton";
-import GoogleIcon from "../../components/LoginComponents/GoogleIcon/GoogleIcon";
-import MetaIcon from "../../components/LoginComponents/MetaIcon/MetaIcon";
-import AppleIcon from "../../components/LoginComponents/AppleIcon/AppleIcon";
+import Icon from "../../components/partials/Icon/Icon";
+import GoogleIcon from "../../assets/images/misc/GoogleIcon.png";
+import MetaIcon from "../../assets/images/misc/MetaIcon.png";
+import AppleIcon from "../../assets/images/misc/AppleIcon.png";
 
 const login = () => {
   return (
@@ -31,9 +32,9 @@ const login = () => {
           <CreateAccountButton />
           <p className="loginbody__right__continuewith">Or continue with</p>
           <div className="loginbody__right__platformIcons">
-            <GoogleIcon />
-            <MetaIcon />
-            <AppleIcon />
+            <Icon icon={GoogleIcon} />
+            <Icon icon={MetaIcon} />
+            <Icon icon={AppleIcon} />
           </div>
         </div>
       </div>

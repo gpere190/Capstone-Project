@@ -1,0 +1,62 @@
+@use '../../../styles/partials/colors' as*;
+@use '../../../styles/partials/fonts' as*;
+@use '../../../styles/partials/mixins' as*;
+
+.paragraph{
+    font-size: large;
+    color:aqua;
+}
+
+.asl__textbox{
+    display: flex;
+    align-self: center;
+    width: 50%;
+    padding: 24px 120px 24px 46px;
+    justify-items: center;
+    border-radius: 25px;
+    background: #FFFAFA;
+    font-size: larger;
+}
+
+.body__text{
+    color: $white;
+}
+.body{
+    // background-color: rgb(200, 126, 247);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 80.5vh;
+    align-items: center;
+    font-family: 'titillium-regular'; 
+    box-sizing: border-box;
+    margin: 0rem;
+
+    &__profileImage{
+        //background-color: greenyellow;
+        display: flex;
+        height: 14rem;
+        width: auto;
+        align-self: center;
+    }
+
+    &__text{
+        color:aquamarine;
+        font-size: 3rem;
+    }
+
+    &__textboxRow{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__submitThumbsup{
+        margin-left: 10%;
+        height: 5rem;
+        width: auto;
+    }
+
+
+
+}
+
