@@ -1,24 +1,21 @@
 import "./CreateAccountPage.scss";
 import React from "react";
-import Header from "../../components/Header/Header2";
-import Footer from "../../components/Footer/Footer";
+import Header from "../../components/partials/Header/Header2";
+import Footer from "../../components/partials/Footer/Footer";
 import Profile1 from "../../assets/images/profiles/profile_mickey.png";
 import Profile2 from "../../assets/images/profiles/Profile_Baby.png";
 import Profile3 from "../../assets/images/profiles/Profile_IronMan.png";
 import Profile4 from "../../assets/images/profiles/Profile_spoon.png";
 import Profile5 from "../../assets/images/profiles/Profile_Woodie.png";
-import EmailInput from "../../components/partials/EmailInput/EmailInput";
-import PasswordInput from "../../components/partials/PasswordInput/PasswordInput";
-import ConfirmPassInput from "../../components/CreateAccountComponents/ConfirmPassInput/ConfirmPassInput";
-import SignUpButton from "../../components/CreateAccountComponents/SignUpButton/SignUpButton";
 import HaveAccountButton from "../../components/CreateAccountComponents/HaveAccountButton/HaveAccountButton";
-import Icon from "../../components/partials/Icon/Icon";
+import Icon from "../../components/Icon/Icon";
 import GoogleIcon from "../../assets/images/misc/GoogleIcon.png";
 import MetaIcon from "../../assets/images/misc/MetaIcon.png";
 import AppleIcon from "../../assets/images/misc/AppleIcon.png";
 import ProfileButton from "../../components/CreateAccountComponents/ProfileButton/ProfileButton";
+import CreateAccountForm from "../../components/CreateAccountComponents/CreateAccountForm/CreateAccountForm";
 
-const createaccount = () => {
+const CreateAccountPage = () => {
   return (
     <div className="background">
       <Header />
@@ -38,11 +35,11 @@ const createaccount = () => {
 
         <div className="createaccountbody__right">
           <p className="createaccountbody__right__Text">Create Account</p>
-          <EmailInput />
-          <PasswordInput />
-          <ConfirmPassInput />
-          <SignUpButton />
+
+          <CreateAccountForm />
+
           <HaveAccountButton />
+
           <p className="createaccountbody__right__continuewith">
             Or continue with
           </p>
@@ -58,4 +55,4 @@ const createaccount = () => {
   );
 };
 
-export default createaccount;
+export default CreateAccountPage;

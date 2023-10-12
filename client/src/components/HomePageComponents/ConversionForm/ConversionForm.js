@@ -1,9 +1,7 @@
 import "./ConversionForm.scss";
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import MickeyThumbsUpButton from "../MickeyThumbsUp/MickeyThumbsUp";
 import LettersContainer from "../LettersContainer/LettersContainer";
-
 //images
 import profileMickeyImage from "../../../assets/images/profiles/profile_mickey.png";
 
@@ -30,7 +28,11 @@ const ConversionForm = () => {
 
   return (
     <div className="body">
-      <img className="body__profileImage" src={profileIcon}></img>
+      <img
+        className="body__profileImage"
+        src={profileIcon}
+        alt="profile_image"
+      ></img>
 
       {hasSubmitted && <LettersContainer word={submittedValue} />}
 
