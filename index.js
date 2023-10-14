@@ -1,5 +1,7 @@
 const express = require("express");
+const session = require("express-session");
 const cors = require("cors");
+const userRoutes = require("./routes/userRoutes");
 require("dotenv").config();
 
 const app = express();
@@ -20,6 +22,15 @@ app.use(cors({ origin: CORS_ORIGIN }), (req, res, next) => {
 
 // only accepts json requests
 app.use(express.json());
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+app.use("/api/users", userRoutes);
 
 const lettersRoutes = require("./routes/lettersRoutes");
 app.use("/api/letters", lettersRoutes);
