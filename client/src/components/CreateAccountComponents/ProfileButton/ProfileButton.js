@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ProfileButton.scss";
-import { NavLink } from "react-router-dom";
+import ProfileContext from "../../../utils/ProfileContext";
 
-const ProfileButton = ({ profile, profileNum }) => {
+const ProfileButton = ({ profile }) => {
+  const { profileIcon, setProfileIcon } = useContext(ProfileContext);
+
   const handleClick = () => {
-    alert("Hello world! " + profileNum);
+    setProfileIcon(profile);
   };
 
   return (
     <img
       className="loginbody__left__characters__profiles"
+      style={{
+        border: profile == profileIcon ? "3px solid white" : "none",
+        borderRadius: "50%",
+      }}
       src={profile}
       onClick={handleClick}
     ></img>

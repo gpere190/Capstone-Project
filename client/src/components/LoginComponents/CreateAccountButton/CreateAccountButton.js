@@ -6,7 +6,7 @@ function CreateAccountButton() {
   const handleClick = () => {};
 
   return (
-    <NavLink to="/create-account">
+    <NavLink to="/register">
       <button onClick={handleClick} className="createAccountButton">
         Create new account
       </button>

@@ -1,46 +1,60 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./CreateAccountForm.scss";
-import SignUpButton from "../SignUpButton/SignUpButton";
 
 const CreateAccountForm = () => {
-  const [inputValue, setInputValue] = useState("");
-  const [submittedValue, setSubmittedValue] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
-  const validateEmail = (event) => {
-    const newValue = event.target.value;
-    // Check if the input matches the desired pattern
-    if (/[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(newValue)) {
-      setInputValue(newValue);
+  const register = (event) => {
+    event.preventDefault();
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
     }
+
+    if (!validatePassword(password)) {
+      alert("Passwords does not match, meet the criteria");
+      return;
+    }
+
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/api/users/register`, {
+        username: username,
+        password: password,
+      })
+      .then((response) => {
+        console.log(response);
+        navigate("/login");
+      });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); //prevents from refreshing the page
-    setSubmittedValue(inputValue);
+  const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    return passwordRegex.test(String(password));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Email</label>
+    <form onSubmit={register}>
+      <label>Create Username</label>
       <input
-        className="createEmail__textbox"
-        type="email"
-        id="email"
+        className="createUsername__textbox"
+        type="text"
+        placeholder="Username"
+        onChange={(e) => setUsername(e.target.value)}
         required
-        placeholder="Email"
-        onChange={validateEmail}
-        pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-        // value={}
-        title="Email for example: abc123@gmail.com"
       />
+
       <label>Create Password</label>
       <input
         className="createPassword__textbox"
         type="password"
         placeholder="Password"
-        // value={}
-        // onChange={}
+        onChange={(e) => setPassword(e.target.value)}
         required
       />
       <label>Confirm Password</label>
@@ -48,11 +62,12 @@ const CreateAccountForm = () => {
         className="confirmPassword__textbox"
         type="password"
         placeholder="Password"
-        // value={}
-        // onChange={}
+        onChange={(e) => setConfirmPassword(e.target.value)}
         required
       />
-      <SignUpButton />
+      <button type="submit" className="signInButton">
+        Sign Up
+      </button>
     </form>
   );
 };

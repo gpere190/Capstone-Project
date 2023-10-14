@@ -16,7 +16,18 @@ const Letter = ({ letterProp }) => {
       });
   }, []); // The empty dependency array ensures the effect runs only once
 
-  return <img src={letterData.image_src} alt={letterData.Letter} />;
+  return (
+    <img
+      style={{
+        height: "100px",
+        width: "100px",
+        margin: "8px",
+        borderRadius: "25px",
+      }}
+      src={letterData.image_src}
+      alt={letterData.Letter}
+    />
+  );
 };
 
 export default Letter;

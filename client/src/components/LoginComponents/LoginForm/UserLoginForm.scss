@@ -5,7 +5,7 @@ label{
     color: white
 }
 
-.email__textbox{
+.username__textbox{
     display: flex;
     align-self: center;
     width: 40%;
@@ -29,4 +29,18 @@ label{
     font-size: larger;
     margin-bottom: 2rem;
     color: $grey-text;
+}
+
+.signInButton{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 45rem;
+    padding: 20px 80px 20px 66px;
+    border-radius: 25px;
+    background: $blue;
+    color: $white;
+    font-size: larger;
+    margin-bottom: 2rem;
+    //box-shadow: -10px 10px 100px $white;
 }

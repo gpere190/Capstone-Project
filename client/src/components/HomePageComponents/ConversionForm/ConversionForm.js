@@ -1,15 +1,14 @@
 import "./ConversionForm.scss";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import MickeyThumbsUpButton from "../MickeyThumbsUp/MickeyThumbsUp";
 import LettersContainer from "../LettersContainer/LettersContainer";
-//images
-import profileMickeyImage from "../../../assets/images/profiles/profile_mickey.png";
+import ProfileContext from "../../../utils/ProfileContext";
 
 const ConversionForm = () => {
-  const [profileIcon, setProfileIcon] = useState(profileMickeyImage);
   const [inputValue, setInputValue] = useState("");
   const [submittedValue, setSubmittedValue] = useState("");
   const [hasSubmitted, setHasSubmitted] = useState(false);
+  const { profileIcon } = useContext(ProfileContext);
 
   const handleInputChange = (event) => {
     const newValue = event.target.value;

@@ -1,43 +1,38 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./UserLoginForm.scss";
 import DisneyFriendsImg from "../../../assets/images/misc/disneyFriends.webp";
-//import EmailInput from "../../partials/EmailInput/EmailInput";
-//import PasswordInput from "../../partials/PasswordInput/PasswordInput";
-import SignInButton from "../SignInButton/SignInButton";
 import CreateAccountButton from "../CreateAccountButton/CreateAccountButton";
 import Icon from "../../Icon/Icon";
 import GoogleIcon from "../../../assets/images/misc/GoogleIcon.png";
 import MetaIcon from "../../../assets/images/misc/MetaIcon.png";
 import AppleIcon from "../../../assets/images/misc/AppleIcon.png";
+import UserContext from "../../../utils/UserContext";
 
 const UserLoginForm = () => {
-  const [inputValue, setInputValue] = useState("");
-  const [submittedValue, setSubmittedValue] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const { setLoggedInUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   // Load data from the database using Axios and the API URL from .env
-  //   axios
-  //     .get(`${process.env.REACT_APP_API_URL}/api/email/${inputprop}`)
-  //     .then((response) => {
-  //       setInputValue(response.data); // Assuming the response is an array of objects
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching email:", error);
-  //     });
-  // }, [inputprop]); // The empty dependency array ensures the effect runs only once
+  const login = (event) => {
+    event.preventDefault();
 
-  const validateEmail = (event) => {
-    const newValue = event.target.value;
-    // Check if the input matches the desired pattern
-    if (/[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/.test(newValue)) {
-      setInputValue(newValue);
-    }
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault(); //prevents from refreshing the page
-    setSubmittedValue(inputValue);
+    axios
+      .post(`${process.env.REACT_APP_API_URL}/api/users/login`, {
+        username: username,
+        password: password,
+      })
+      .then((response) => {
+        if (response.data.auth) {
+          localStorage.setItem("token", response.data.token);
+          setLoggedInUser(response.data.user.username);
+          navigate("/");
+        } else {
+          alert(response.data.message);
+        }
+      });
   };
 
   return (
@@ -55,30 +50,28 @@ const UserLoginForm = () => {
 
       <div className="loginbody__right">
         <p className="loginbody__right__Text">Login Here</p>
-        <div>`Submitted Value ${submittedValue}`</div>
-        <form onSubmit={handleSubmit}>
-          <label>Email</label>
+
+        <form onSubmit={login}>
+          <label>Username</label>
           <input
-            className="email__textbox"
-            type="email"
-            id="email"
+            className="username__textbox"
+            type="text"
+            placeholder="Username"
+            onChange={(e) => setUsername(e.target.value)}
             required
-            placeholder="Email"
-            onChange={validateEmail}
-            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-            // value={}
-            title="Email for example: abc123@gmail.com"
           />
           <label>Password</label>
           <input
             className="password__textbox"
             type="password"
             placeholder="Password"
-            // value={}
-            // onChange={}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <SignInButton />
+          <button type="submit" className="signInButton">
+            Sign In
+          </button>
+
           <CreateAccountButton />
           <p className="loginbody__right__continuewith">Or continue with</p>
           <div className="loginbody__right__platformIcons">

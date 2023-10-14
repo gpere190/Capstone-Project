@@ -25,11 +25,11 @@ const CreateAccountPage = () => {
             Select a profile character
           </p>
           <div className="createaccountbody__left__characters">
-            <ProfileButton profile={Profile1} profileNum="1" />
-            <ProfileButton profile={Profile2} profileNum="2" />
-            <ProfileButton profile={Profile3} profileNum="3" />
-            <ProfileButton profile={Profile4} profileNum="4" />
-            <ProfileButton profile={Profile5} profileNum="5" />
+            <ProfileButton profile={Profile1} />
+            <ProfileButton profile={Profile2} />
+            <ProfileButton profile={Profile3} />
+            <ProfileButton profile={Profile4} />
+            <ProfileButton profile={Profile5} />
           </div>
         </div>
 
