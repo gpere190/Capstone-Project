@@ -6,10 +6,6 @@ require("dotenv").config();
 
 const app = express();
 
-// EXPRESS supports all HTTPS methods: GET, POST, PUT, DELETE
-// -when 2 routes share the same path, the HTTPS verb/method determines which route is used.
-// -route can be used to chain together different methods
-
 // Access environment variables defined in .env
 const PORT = process.env.PORT || 8080; // Default to 8080 if PORT is not defined in .env
 const HOST = process.env.HOST || "localhost"; // Default to localhost if HOST is not defined in .env
