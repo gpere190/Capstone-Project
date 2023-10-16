@@ -8,10 +8,6 @@ import Profile3 from "../../assets/images/profiles/Profile_IronMan.png";
 import Profile4 from "../../assets/images/profiles/Profile_spoon.png";
 import Profile5 from "../../assets/images/profiles/Profile_Woodie.png";
 import HaveAccountButton from "../../components/CreateAccountComponents/HaveAccountButton/HaveAccountButton";
-import Icon from "../../components/Icon/Icon";
-import GoogleIcon from "../../assets/images/misc/GoogleIcon.png";
-import MetaIcon from "../../assets/images/misc/MetaIcon.png";
-import AppleIcon from "../../assets/images/misc/AppleIcon.png";
 import ProfileButton from "../../components/CreateAccountComponents/ProfileButton/ProfileButton";
 import CreateAccountForm from "../../components/CreateAccountComponents/CreateAccountForm/CreateAccountForm";
 
@@ -43,11 +39,7 @@ const CreateAccountPage = () => {
           <p className="createaccountbody__right__continuewith">
             Or continue with
           </p>
-          <div className="createaccountbody__right__platformIcons">
-            <Icon icon={GoogleIcon} />
-            <Icon icon={MetaIcon} />
-            <Icon icon={AppleIcon} />
-          </div>
+          <div className="createaccountbody__right__platformIcons"></div>
         </div>
       </div>
       <Footer />

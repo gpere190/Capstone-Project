@@ -3,6 +3,7 @@ import "./Header.scss";
 import desktopLogo from "../../../assets/images/misc/logo_desktop.png";
 import { NavLink } from "react-router-dom";
 import UserContext from "../../../utils/UserContext";
+import Streak from "./Streak";
 
 const Header = () => {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
@@ -22,8 +23,11 @@ const Header = () => {
 
           <div className="header__wrapper">
             {/* Welcome */}
-            <div className="header__login"> Welcome, {loggedInUser}!</div>
-
+            <div className="header__login">
+              {" "}
+              Welcome, {loggedInUser.username}!
+            </div>
+            <Streak />
             {/* Logout */}
             <NavLink className="header__login" to={"/login"} onClick={logOut}>
               Logout

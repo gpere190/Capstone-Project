@@ -1,0 +1,15 @@
+.streak {
+ display: flex;
+ align-items: center;
+
+    &__sparkles {
+        height: 3rem;
+    }
+
+    &__value {
+        font-size: 4rem;
+        margin-left: 20px;
+        font-weight: bold;
+        font-family: poppin;
+    }
+}

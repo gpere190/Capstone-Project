@@ -27,7 +27,7 @@ const UserLoginForm = () => {
       .then((response) => {
         if (response.data.auth) {
           localStorage.setItem("token", response.data.token);
-          setLoggedInUser(response.data.user.username);
+          setLoggedInUser(response.data.user);
           navigate("/");
         } else {
           alert(response.data.message);

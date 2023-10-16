@@ -3,7 +3,7 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <div className="footer">
-      <div>Footer in progress...</div>
+      <div className="footer__text">Disney ASL. Rights Reserved. </div>
     </div>
   );
 };

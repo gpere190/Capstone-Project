@@ -65,7 +65,7 @@ const CreateAccountForm = () => {
         onChange={(e) => setConfirmPassword(e.target.value)}
         required
       />
-      <button type="submit" className="signInButton">
+      <button type="submit" className="signUpButton">
         Sign Up
       </button>
     </form>
