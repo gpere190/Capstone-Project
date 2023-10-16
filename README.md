@@ -8,8 +8,7 @@ The primary goal of this application is to ignite children's enthusiasm for lear
 
 ## Authors
 
-- [@gpere190](https://www.github.com/gricelle-perez)
-
+- [@Gricelle-Perez](https://www.github.com/gpere190
 
 ![Logo](https://user-images.githubusercontent.com/41925770/275376322-f03d39a1-5228-440f-b715-076af467180f.png)
 
