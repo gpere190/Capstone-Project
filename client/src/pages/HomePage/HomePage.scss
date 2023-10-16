@@ -1,0 +1,13 @@
+@use '../../styles/partials/colors' as*;
+@use '../../styles/partials/fonts' as*;
+@use '../../styles/partials/mixins' as*;
+
+
+.background{
+    background-image: url("../../assets/images/misc/disney_background.png");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+

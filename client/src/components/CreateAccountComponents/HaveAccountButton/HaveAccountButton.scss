@@ -1,0 +1,18 @@
+@use '../../../styles/partials/colors' as*;
+@use '../../../styles/partials/fonts' as*;
+@use '../../../styles/partials/mixins' as*;
+
+
+.haveAccountButton{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 24rem;
+    padding: 15px 80px 15px 66px;
+    border-radius: 25px;
+    background: $white;
+    color: $grey-text;
+    font-size: larger;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}

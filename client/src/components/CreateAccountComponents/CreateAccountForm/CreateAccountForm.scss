@@ -1,0 +1,59 @@
+@use '../../../styles/partials/colors' as*;
+@use '../../../styles/partials/fonts' as*;
+@use '../../../styles/partials/mixins' as*;
+label{
+    color: white
+}
+
+.createUsername__textbox{
+    display: flex;
+    align-self: center;
+    width: 57%;
+    padding: 24px 80px 24px 66px;
+    justify-items: center;
+    border-radius: 25px;
+    background: #FFFAFA;
+    font-size: larger;
+    margin-bottom: 2rem;
+    color: $grey-text;
+}
+
+.createPassword__textbox{
+    display: flex;
+    align-self: center;
+    width: 57%;
+    padding: 24px 80px 24px 66px;
+    justify-items: center;
+    border-radius: 25px;
+    background: #FFFAFA;
+    font-size: larger;
+    margin-bottom: 2rem;
+    color: $grey-text;
+}
+
+
+.confirmPassword__textbox{
+    display: flex;
+    align-self: center;
+    width: 57%;
+    padding: 24px 80px 24px 66px;
+    justify-items: center;
+    border-radius: 25px;
+    background: #FFFAFA;
+    font-size: larger;
+    margin-bottom: 2rem;
+    color: $grey-text;
+}
+
+.signUpButton{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 25rem;
+    padding: 20px 80px 20px 66px;
+    border-radius: 25px;
+    background: $blue;
+    color: $white;
+    font-size: larger;
+    margin-bottom: 2rem;
+}

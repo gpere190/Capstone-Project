@@ -1,0 +1,28 @@
+@use '../../../styles/partials/colors' as*;
+@use '../../../styles/partials/fonts' as*;
+@use '../../../styles/partials/mixins' as*;
+
+body {
+    box-sizing: border-box;
+    font-family: 'titillium-regular';
+    margin: 0;
+    color: white;
+}
+
+.footer {
+    //background: transparent;
+    //padding: 1.5rem 2.5rem;
+    &__text {
+        color: rgb(171, 162, 162);
+        text-align: center;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: $MP3-size;
+        font-style: normal;
+        font-weight: 400;
+        line-height: $MP3-height;
+        @include tablet {
+            font-size: $H4-size;
+            line-height: $H4-height;
+        }
+    }
+}

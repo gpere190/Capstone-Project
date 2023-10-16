@@ -1,0 +1,27 @@
+@use '../../../styles/partials/colors' as*;
+@use '../../../styles/partials/fonts' as*;
+@use '../../../styles/partials/mixins' as*;
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    justify-content: space-between;
+    margin: 2.5rem 2rem 4rem 4rem;
+}
+.item{
+    height: 5rem;
+    margin-right: 0rem;
+}
+
+.header__logo{
+    &__image{
+        height: 150px;
+        width: 400px;
+    }
+    
+}
+
+
+

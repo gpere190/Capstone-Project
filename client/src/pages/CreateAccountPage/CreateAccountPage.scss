@@ -1,0 +1,79 @@
+@use '../../styles/partials/colors' as*;
+@use '../../styles/partials/fonts' as*;
+@use '../../styles/partials/mixins' as*;
+
+body {
+    font-family: 'titillium-regular'; 
+    box-sizing: border-box;
+    margin: 0rem;
+}
+
+.background{
+    background-image: url("../../assets/images/misc/disney_background.png");
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.createaccountbody{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+
+    &__left {
+       // background-color: pink;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        text-align: center;
+
+    &__Text {
+        color: $white;
+        font-size: 2rem;
+        width: 60%;
+    }
+
+    &__characters{
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+       
+    }
+    }
+
+    &__right{
+        //background-color: rgb(193, 246, 114);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        
+        &__Text{
+            color: $white;
+            font-size: 2rem;
+            width: 60%;
+        }
+
+        &__continuewith{
+            color: transparent;
+            font-size: 1.5rem;
+            width: 60%;
+        }
+
+        &__platformIcons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 30%;
+            //background-color: aqua;
+            //height: 20%;
+        }
+    }
+
+
+
+    
+}
+
