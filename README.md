@@ -21,6 +21,7 @@ Install my-project with npm
 ```bash
   cd capstone-project
   cd client && npm i
+  npm start
   cd ..
   cd server
   mysql -u root -p
